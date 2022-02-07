@@ -7,7 +7,7 @@ const ProductCard = ({product}) => {
         <View style={styles.container}>
             <Image 
                 style={styles.image}
-                source={null}
+                source={{uri: product.image}}
             />
             <View style={styles.body_container}>
                 <Text style={styles.title}>{product.title}</Text>
