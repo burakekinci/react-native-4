@@ -15,8 +15,27 @@ function Router(){
   return(
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="ProductsPage" component={Products}/>
-        <Stack.Screen name="DetailPage" component={Detail}/>
+        <Stack.Screen 
+          name="ProductsPage" 
+          component={Products} 
+          options={{
+            title:'MAĞAZA',
+            headerTitleAlign:'center',
+            headerStyle: {backgroundColor: '#660099',borderRadius:10,},
+            headerTitleStyle: {color: '#99ff66',fontWeight:'800'},
+          }} 
+        />
+        <Stack.Screen 
+          name="DetailPage" 
+          component={Detail}
+          options={{
+            title:'DETAY',
+            headerTitleAlign:'center',
+            headerStyle: {backgroundColor: '#660099'},
+            headerTitleStyle: {color: '#99ff66',fontWeight:'800'},
+            headerTintColor: 'white',
+          }} 
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

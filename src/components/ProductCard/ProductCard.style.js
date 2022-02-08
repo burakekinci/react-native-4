@@ -1,4 +1,5 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
+
 
 export default StyleSheet.create({
     container:{
@@ -7,8 +8,8 @@ export default StyleSheet.create({
         margin:10,
         borderRadius: 10,
         borderWidth:1,
-        borderColor:'lightgray',
         flex:1,
+        borderColor:'lightgray',
     },
     body_container:{
         flex:1,
@@ -24,18 +25,25 @@ export default StyleSheet.create({
         resizeMode:'contain',
     },
     title:{
-        fontSize:13,
-        fontWeight:'bold',
+        fontSize:14,
+        fontWeight:'600',
         fontFamily:'Gilroy',
         alignSelf:'center',
-        color:'deeppink',
+        color:'black',
     },
     price:{
-        marginTop:8,
-        fontSize:17,
-        color:'fuchsia',
-        fontStyle:'italic',
-        fontWeight:'bold',
+        marginTop:0,
+        fontSize:16,
+        color:'#fffff0',
+        fontWeight:'500',
+    },
+    price_container:{
+        marginVertical:8,
+        backgroundColor:'#6c00ac',
         alignSelf:'center',
+        borderRadius:20,
+        justifyContent:'center',
+        alignItems:'center',
+        width:'55%',
     },
 });

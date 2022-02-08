@@ -10,12 +10,17 @@ import useFetch from '../../hooks/useFetch';
 import Loading from '../../components/Loading';
 import ErrorAnim from '../../components/ErrorAnim';
 
-function Products(){
+function Products({navigation}){
 
     const {loading,error,data} = useFetch("https://fakestoreapi.com/products");
 
+    const handleProductSelect = (id) => {
+        navigation.navigate('DetailPage',{id});
+        console.log(id);
+        console.log('basildi');
+    };
 
-    const renderProduct = ({item}) => <ProductCard product={item} />;
+    const renderProduct = ({item}) => <ProductCard product={item} onSelect={() => handleProductSelect(item.id)} />;
     
 
     if(loading){
