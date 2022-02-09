@@ -28,7 +28,7 @@ function Tabbar(){
                 tabBarInactiveTintColor:'#8000bf',
                 tabBarActiveBackgroundColor:'#8000bf',
                 tabBarItemStyle:{
-                    marginBottom:5, marginHorizontal:10, paddingTop:3,
+                    marginBottom:5, marginHorizontal:10, paddingTop:3, 
                     borderTopLeftRadius:50, borderTopRightRadius:50,borderBottomLeftRadius:50,borderBottomRightRadius:50,
                 }
             })}  

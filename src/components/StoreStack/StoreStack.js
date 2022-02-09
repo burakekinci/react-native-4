@@ -10,15 +10,17 @@ const Stack = createNativeStackNavigator()
 
 function Store(){
     return(
-        <Stack.Navigator>
+        <Stack.Navigator screenOptions={{
+            headerTitleAlign:'center',
+            headerStyle: {backgroundColor: '#660099',borderRadius:10,},
+            headerTitleStyle: {color: '#99ff66', fontFamily:'CinzelDecorative-Bold', fontSize:31},
+            headerTintColor:'white',
+            }}>
             <Stack.Screen 
                 name="ProductsPage" 
                 component={Products} 
                 options={{
                     title:'STORE',
-                    headerTitleAlign:'center',
-                    headerStyle: {backgroundColor: '#660099',borderRadius:10,},
-                    headerTitleStyle: {color: '#99ff66',fontWeight:'800'},
                 }} 
             />
             <Stack.Screen 
@@ -26,10 +28,6 @@ function Store(){
                 component={Detail}
                 options={{
                     title:'DETAIL',
-                    headerTitleAlign:'center',
-                    headerStyle: {backgroundColor: '#660099'},
-                    headerTitleStyle: {color: '#99ff66',fontWeight:'800'},
-                    headerTintColor: 'white',
                 }} 
             />
         </Stack.Navigator>

@@ -25,7 +25,7 @@ export default StyleSheet.create({
     },
     price_mask:{
         backgroundColor:'#ffff00',borderBottomRightRadius:20,borderTopRightRadius:20,
-        borderColor:'#8000bf' ,
+        borderColor:'#8000bf' , elevation:15,
     },
     add:{fontWeight:'bold',fontSize:22,textAlign:'center',backgroundColor:'#ffff00',
         borderBottomLeftRadius:20, borderTopLeftRadius:20, padding:5,color:'#660099',
@@ -34,7 +34,7 @@ export default StyleSheet.create({
     },
     add_mask:{
         backgroundColor:'#8000bf',borderBottomLeftRadius:20,borderTopLeftRadius:20,width:'25%',
-        borderColor:'#ffff00',
+        borderColor:'#ffff00', elevation:15,
     },
     price_container:{
         flexDirection:'row-reverse',
