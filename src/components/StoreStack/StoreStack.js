@@ -12,7 +12,7 @@ function Store(){
     return(
         <Stack.Navigator screenOptions={{
             headerTitleAlign:'center',
-            headerStyle: {backgroundColor: '#660099',borderRadius:10,},
+            headerStyle: {backgroundColor: '#660099',},
             headerTitleStyle: {color: '#99ff66', fontFamily:'CinzelDecorative-Bold', fontSize:31},
             headerTintColor:'white',
             }}>
