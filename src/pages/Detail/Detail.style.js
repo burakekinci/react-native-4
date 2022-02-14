@@ -3,7 +3,7 @@ import { StyleSheet, Dimensions } from 'react-native';
 const deviceSize = Dimensions.get('window');
 
 export default StyleSheet.create({
-    container:{flex:1,backgroundColor:'#fff5ee'},
+    container:{flex:1,backgroundColor:'#fff5ee',marginBottom:50},
     body_container:{padding:10},
     image_container:{
         padding:15,
