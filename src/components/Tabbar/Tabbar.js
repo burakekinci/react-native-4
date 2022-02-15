@@ -19,7 +19,7 @@ function Tabbar(){
                 tabBarLabelStyle:{fontSize:16, },
                 tabBarIcon:({color,size})=> {
                     let iconName;
-                    if(route.name == 'Store'){iconName='pricetags';}
+                    if(route.name == 'Store'){iconName='cart-outline';}
                     else if(route.name == 'Profile'){iconName='person';}
 
                     return <Ionicon name={iconName} size={size} color={color} />
