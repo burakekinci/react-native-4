@@ -8,7 +8,7 @@ import CouponsPage from '../../pages/CouponsPage';
 import Settings from '../../pages/Settings';
 import Help from '../../pages/Help';
 import Orders from '../../pages/Orders';
-
+import CreditCards from '../../pages/CreditCards';
 
 const Stack = createNativeStackNavigator();
 
@@ -58,6 +58,12 @@ function ProfileStack(){
                 name='OrdersPage'
                 component={Orders}
                 options={{title: "My Orders"}}
+            />
+
+            <Stack.Screen 
+                name='CardsPage'
+                component={CreditCards}
+                options={{title: "My Cards"}}
             />
         </Stack.Navigator>
     );

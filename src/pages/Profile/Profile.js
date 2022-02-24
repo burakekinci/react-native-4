@@ -12,8 +12,8 @@ import { NavigationContainer } from '@react-navigation/native';
 function Profile({navigation}){
 
     
-    const renderIcon = ({item}) => <IconCard icon={item} nav={navigation} navigationScreenName={item.route} />
-    const renderOption = ({item}) => <OptionCard options={item} nav={navigation} navigationScreenName={item.route} />
+    const renderIcon = ({item}) => <IconCard icon={item} nav={navigation} />
+    const renderOption = ({item}) => <OptionCard options={item} nav={navigation} />
 
     return(
         <SafeAreaView style={{padding:8,flex:1,backgroundColor:'#fff5ee'}}>
@@ -41,10 +41,10 @@ function Profile({navigation}){
                                 horizontal
                                 data={[
                                     //for adding new icon object create navigationscreen and define as route
-                                    {key:'wallet',route:'WalletPage'},
-                                    {key:'coupons',route:'CouponsPage'},
-                                    /*{key:'assistant'},
-                                    {key:'gift'}*/
+                                    {key:'wallet',route:'WalletPage',iconName:'wallet-outline'},
+                                    {key:'coupons',route:'CouponsPage',iconName:'pricetags-outline'},
+                                    {key:'assistant',route:null, iconName:'happy-outline'},
+                                    {key:'gift',route:null, iconName:'gift'}
                                 ]}
                                 renderItem={renderIcon}
                                 contentContainerStyle={styles.icon_list}
@@ -64,9 +64,10 @@ function Profile({navigation}){
                         <FlatList
                             data={[
                                 //for adding new option object create navigationscreen and define as route
-                                {key:'settings',route:'SettingsPage'},
-                                {key:'help',route:'HelpPage'},
-                                {key:'orders',route:'OrdersPage'}
+                                {key:'Settings',route:'SettingsPage',iconName:'settings-outline'},
+                                {key:'Help',route:'HelpPage',iconName:'help-circle-outline'},
+                                {key:'Orders',route:'OrdersPage',iconName:'basket-outline'},
+                                {key:'Credit Cards',route:'CardsPage',iconName:'card-outline'},
                             ]}
                             renderItem={renderOption}
                             
