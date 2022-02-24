@@ -6,20 +6,21 @@ import Ionicon from 'react-native-vector-icons/Ionicons';
 import LinearGradient from 'react-native-linear-gradient';
 import IconCard from '../../components/IconCard/IconCard';
 import OptionCard from '../../components/OptionCard/OptionCard';
+import { NavigationContainer } from '@react-navigation/native';
 
 
-function Profile(){
+function Profile({navigation}){
 
-    function iconListElement(name) {
-        let iconName;
-        if(name==='wallet'){iconName='wallet-outline';}
-        if(name==='cupons'){iconName='pricetags-outline';}
-        if(name==='assistant'){iconName='happy-outline';}
-        if(name==='gift'){iconName='gift-outline';}
-        return iconName;
+    function handleOnSelect(itemName) {
+        if(itemName==='wallet'){navigation.navigate('WalletPage');}
+        else if(itemName==='coupons'){navigation.navigate('CouponsPage');}
+        else if(itemName==='assistant'){console.log(`${itemName} pressed`);}
+        else if(itemName==='gift'){console.log(`${itemName} pressed`);}
+        return 
     }
 
-    const renderIcon = ({item}) => <IconCard icon={item}  />
+
+    const renderIcon = ({item}) => <IconCard icon={item} onSelect={()=> handleOnSelect(item.key) }/>
     const renderOption = ({item}) => <OptionCard options={item} />
 
     return(

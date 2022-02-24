@@ -3,6 +3,7 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Ionicon from 'react-native-vector-icons/Ionicons';
 import StoreStack from '../StoreStack';
+import ProfileStack from '../ProfileStack';
 import Profile from '../../pages/Profile';
 
 
@@ -34,7 +35,7 @@ function Tabbar(){
             })}  
         >
             <Tab.Screen name='Store' component={StoreStack} />
-            <Tab.Screen name='Profile' component={Profile}/>
+            <Tab.Screen name='Profile' component={ProfileStack}/>
         </Tab.Navigator>
     )
 }
