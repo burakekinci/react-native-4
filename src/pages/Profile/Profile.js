@@ -11,17 +11,9 @@ import { NavigationContainer } from '@react-navigation/native';
 
 function Profile({navigation}){
 
-    function handleOnSelect(itemName) {
-        if(itemName==='wallet'){navigation.navigate('WalletPage');}
-        else if(itemName==='coupons'){navigation.navigate('CouponsPage');}
-        else if(itemName==='assistant'){console.log(`${itemName} pressed`);}
-        else if(itemName==='gift'){console.log(`${itemName} pressed`);}
-        return 
-    }
-
-
-    const renderIcon = ({item}) => <IconCard icon={item} onSelect={()=> handleOnSelect(item.key) }/>
-    const renderOption = ({item}) => <OptionCard options={item} />
+    
+    const renderIcon = ({item}) => <IconCard icon={item} nav={navigation} navigationScreenName={item.route} />
+    const renderOption = ({item}) => <OptionCard options={item} nav={navigation} navigationScreenName={item.route} />
 
     return(
         <SafeAreaView style={{padding:8,flex:1,backgroundColor:'#fff5ee'}}>
@@ -48,21 +40,19 @@ function Profile({navigation}){
                             <FlatList 
                                 horizontal
                                 data={[
-                                    {key:'wallet'},
-                                    {key:'coupons'},
-                                    {key:'assistant'},
-                                    {key:'gift'}
+                                    //for adding new icon object create navigationscreen and define as route
+                                    {key:'wallet',route:'WalletPage'},
+                                    {key:'coupons',route:'CouponsPage'},
+                                    /*{key:'assistant'},
+                                    {key:'gift'}*/
                                 ]}
                                 renderItem={renderIcon}
                                 contentContainerStyle={styles.icon_list}
                             />
                         </View>
-                        
-
-                        
-
                     </LinearGradient>
                 </View>
+
                 <View style={styles.lower_container}>
                     <LinearGradient 
                         start={{x: 0, y: 0.9}} end={{x: 0.85, y: 0.1}}
@@ -73,9 +63,10 @@ function Profile({navigation}){
                     <View style={styles.options_list_container}>
                         <FlatList
                             data={[
-                                {key:'settings'},
-                                {key:'help'},
-                                {key:'orders'}
+                                //for adding new option object create navigationscreen and define as route
+                                {key:'settings',route:'SettingsPage'},
+                                {key:'help',route:'HelpPage'},
+                                {key:'orders',route:'OrdersPage'}
                             ]}
                             renderItem={renderOption}
                             

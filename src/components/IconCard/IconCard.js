@@ -4,7 +4,7 @@ import Ionicon from 'react-native-vector-icons/Ionicons';
 import { View,Text } from 'react-native';
 
 
-const IconCard = ({icon , onSelect})=>{
+const IconCard = ({icon ,  nav, navigationScreenName})=>{
 
     function iconListElement(name) {
         let iconName;
@@ -19,7 +19,7 @@ const IconCard = ({icon , onSelect})=>{
 
     return(
         <View style={styles.container}>
-            <Ionicon name={iconListElement(icon.key)} size={22} color={'#260f63'} onPress={onSelect}/>
+            <Ionicon name={iconListElement(icon.key)} size={22} color={'#260f63'} onPress={()=> nav.navigate(navigationScreenName)} />
             <Text style={styles.title}>{icon.key}</Text>    
         </View>
     );

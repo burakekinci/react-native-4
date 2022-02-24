@@ -1,15 +1,17 @@
 import React from 'react'
-import { View,Text } from 'react-native';
+import { View,Text,  TouchableNativeFeedback } from 'react-native';
 import styles from './OptionCard.style';
 
-const OptionCard = ({options}) => {
+const OptionCard = ({options, nav, navigationScreenName}) => {
 
     return(
-        <View style={styles.container}>
-            <Text style={styles.title}>
-                {options.key}
-            </Text>
-        </View>
+        <TouchableNativeFeedback onPress={()=> nav.navigate(navigationScreenName)}>
+            <View style={styles.container}>
+                <Text style={styles.title}>
+                    {options.key}
+                </Text>
+            </View>
+        </TouchableNativeFeedback>
     );
 
 }
